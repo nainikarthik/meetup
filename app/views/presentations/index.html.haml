@@ -1,0 +1,24 @@
+.reveal
+  .slides 
+    %section
+      %h3 Engineering Meetup
+      %p Deck
+
+    %section
+      %h3 New Engineers
+      %h3 Updates
+      %h3 Talks / Presentations
+      %h3 Devlinks
+
+    %section
+      - @engineers.each do |engineer, index|
+        %p= index.to_s()
+        %p= link_to engineer.name, '/presentations/#/'
+
+    - @engineers.each do |engineer|
+      %section
+        - engineer.projects.each do |project|
+          %section
+            %h4= engineer.name
+            %p= project.title
+            %p= project.description.html_safe

@@ -1,0 +1,20 @@
+.title
+  %h1 
+    = @engineer.name 
+    Projects
+%table.table.table-striped.table-bordered
+  %thead
+    %th Title
+    %th Description
+    %th Actions
+  %tbody
+  - @projects.each do |project|
+    %tr
+      %td
+        = project.title
+      %td
+        = project.description.html_safe
+      %td
+        %p.edit_link= link_to 'Edit', '/engineers/'+@engineer.id.to_s()+'/projects/'+project.id.to_s()+'/edit'
+
+= link_to 'Engineers', engineers_path, :class => 'btn'

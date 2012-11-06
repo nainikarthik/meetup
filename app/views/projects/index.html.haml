@@ -1,0 +1,22 @@
+.title
+  %h1 
+    = @engineer.name 
+    Projects
+%table.table.table-striped.table-bordered
+  %thead
+    %th Title
+    %th Description
+    %th Actions
+  %tbody
+  - @projects.each do |project|
+    %tr
+      %td
+        = project.title
+      %td
+        = project.description.html_safe
+      %td
+        %p= link_to 'Edit', '/engineers/'+@engineer.id.to_s()+'/projects/'+project.id.to_s()+'/edit'
+        %p= link_to 'Delete', engineer_project_path(@engineer, project),:confirm => 'Are you sure?', :method => :delete
+
+= link_to 'Add New Project', new_engineer_project_path(@engineer), class: 'btn'
+= link_to 'Engineers List', engineers_path, class: 'btn'

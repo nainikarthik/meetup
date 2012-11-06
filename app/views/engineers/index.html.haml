@@ -1,0 +1,18 @@
+.title
+  %h1 Engineers
+%table.table.table-striped.table-bordered
+  %thead
+    %th Name
+    %th Action
+  %tbody
+    - @engineers.each do |engineer|
+      %tr
+        %td
+          %p.name= engineer.name
+        %td
+          %p= link_to 'Edit', edit_engineer_path(engineer)
+          %p= link_to 'Delete', engineer_path(engineer),:confirm => 'Are you sure?', :method => :delete
+          %p= link_to 'Projects', engineer_projects_path(engineer)
+
+= link_to 'Add New Engineer', new_engineer_path, class: 'btn'
+= link_to 'View Presentation', presentations_path, class: 'btn'

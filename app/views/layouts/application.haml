@@ -1,0 +1,17 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %title Engineering Meetup Presentation
+
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "ckeditor/init"
+    %meta{name: 'viewport', content: "width=device-width, initial-scale=1.0"}
+
+    -# - if Rails.env.development?
+    -#   = stylesheet_link_tag 'bootstrap_grid_overlay.css'
+
+
+  %body{:class => controller_name + "-page"}
+    .container
+      = yield
+      = javascript_include_tag "application"

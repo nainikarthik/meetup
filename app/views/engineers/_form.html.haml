@@ -1,0 +1,10 @@
+= form_for @engineer, html: {class: 'form-horizontal'} do |f|
+  = render partial: 'shared/form_errors', locals: {errors: @engineer.errors} if @engineer.errors.any?
+  .control-group
+    = f.label :name, class: 'control-label'
+    .controls
+      = f.text_field :name, class: 'text_field'
+
+    .form-actions
+      = f.button "Save Engineer", class: 'btn btn-primary'
+      = link_to 'Cancel', engineers_path, class: 'btn'
