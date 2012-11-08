@@ -1,19 +1,27 @@
 .reveal
   .slides 
     %section
-      %h3 Engineering Meetup
-      %p Deck
+      %h3 
+        %p Engineering 
+        %p and
+        %p QA Meetup
+      %p Nov 8 2012
 
     %section
-      %h3 New Engineers
+      %h3= link_to 'New Engineer', '/presentations/#/2'
+      %h3= link_to 'Updates', '/presentations/#/3'
+      %h3= link_to 'Devlinks', 'http://bit.ly/devlinks', :target => '_blank'
+
+    %section
+      %h3 Ilya Gulko
+      %p Senior QA Engineer
+
+    %section
       %h3 Updates
-      %h3 Talks / Presentations
-      %h3 Devlinks
-
-    %section
-      - @engineers.each do |engineer, index|
-        %p= index.to_s()
-        %p= link_to engineer.name, '/presentations/#/'
+      - index = 3
+      - @engineers.each do |engineer|
+        - index += 1
+        %p= link_to engineer.name, '/presentations/#/'+index.to_s()
 
     - @engineers.each do |engineer|
       %section
@@ -22,3 +30,8 @@
             %h4= engineer.name
             %p= project.title
             %p= project.description.html_safe
+
+    %section
+      %h3= link_to 'Devlinks', 'http://bit.ly/devlinks', :target => '_blank'
+      %p Any Update on Internal Devlinks Project?
+
