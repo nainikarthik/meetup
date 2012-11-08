@@ -1,0 +1,1 @@
+Reveal.initialize({controls:!0});
