@@ -21,7 +21,7 @@ Testcoffee::Application.configure do
   config.assets.digest = true
 
   # Procompile ckeditor css and js files
-  config.assets.precompile += Ckeditor.assets
+  config.assets.precompile += ['ckeditor/init.js']
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
