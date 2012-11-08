@@ -28,8 +28,8 @@
         - engineer.projects.each do |project|
           %section
             %h4= engineer.name
-            %p= project.title
-            %p= project.description.html_safe
+            %p.title= project.title
+            %div.description= project.description.html_safe
 
     %section
       %h3= link_to 'Devlinks', 'http://bit.ly/devlinks', :target => '_blank'
