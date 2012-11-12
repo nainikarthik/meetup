@@ -1,0 +1,12 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/tmp
+/log
+bin/
+.swp
+.*.swp
+.tags
+
+.DS_Store
