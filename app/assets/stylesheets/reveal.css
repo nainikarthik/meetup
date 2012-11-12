@@ -526,6 +526,10 @@ body {
 	        perspective-origin: 0% 25%;
 }
 
+.reveal .slides>section>section{
+	width: 80% !important;
+}
+
 .reveal .slides>section,
 .reveal .slides>section>section {
 	display: none;
@@ -1182,4 +1186,11 @@ body {
 	visibility: hidden;
 }
 
+.project_list{
+  float:right;
+  margin: 20px 20px 0 0 !important;
+}
 
+.project_list a{
+	font-size: 0.8em;
+}

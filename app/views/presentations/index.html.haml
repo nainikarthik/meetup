@@ -1,3 +1,4 @@
+- slide_index = 3
 .reveal
   .slides 
     %section
@@ -18,13 +19,15 @@
 
     %section
       %h3 Updates
-      - index = 3
-      - @engineers.each do |engineer|
-        - index += 1
-        %p= link_to engineer.name, '/presentations/#/'+index.to_s()
+      - @engineers.each_with_index do |engineer, index|
+        %p= link_to engineer.name, '/presentations/#/' + (slide_index+index+1).to_s()
 
-    - @engineers.each do |engineer|
+    - @engineers.each_with_index do |engineer, engineer_id|
+      - slide_number = slide_index + engineer_id + 1
       %section
+        .project_list
+          - engineer.projects.each_with_index do |project, index|
+            %p= link_to project.title, '/presentations/#/' + slide_number.to_s() + '/' + index.to_s()
         - engineer.projects.each do |project|
           %section
             %h4= engineer.name
