@@ -31,7 +31,7 @@
         - engineer.projects.each do |project|
           %section
             %h4= engineer.name
-            %p.title= project.title
+            %p.title= project.title.titleize
             %div.description= project.description.html_safe
 
     %section
