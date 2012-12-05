@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/galetahub/ckeditor
+  revision: fcf5f5eb4a35be3e06e98bc501060897c7aa23ca
+  specs:
+    ckeditor (3.7.3)
+      mime-types
+      orm_adapter
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -31,9 +39,6 @@ GEM
     arel (3.0.2)
     builder (3.0.4)
     chunky_png (1.2.6)
-    ckeditor (3.7.3)
-      mime-types
-      orm_adapter
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -135,7 +140,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ckeditor (= 3.7.3)
+  ckeditor (= 3.7.3)!
   coffee-rails (~> 3.2.1)
   compass-rails
   haml

@@ -16,7 +16,7 @@ group :assets do
   gem 'zurb-foundation', '3.0.5'
   gem 'compass-rails'
   gem 'twitter-bootstrap-rails'
-  gem "ckeditor", "3.7.3"
+  gem "ckeditor", "3.7.3", :git => 'https://github.com/galetahub/ckeditor'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

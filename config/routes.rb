@@ -1,5 +1,7 @@
 Testcoffee::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   match 'index' => 'presentations#index'
 
   mount Ckeditor::Engine => "/ckeditor"
